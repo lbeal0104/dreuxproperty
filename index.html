@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreux Property Solutions LLC | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="logo-wrap">
+          <img src="logo (2).png" alt="Dreux Property Solutions Logo" />
+        </div>
+        <div class="brand-name">
+          Dreux Property Solutions
+          <span>LLC</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="missions.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="community.html">Community Impact</a>
+        <a href="growth.html">Responsible Growth</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img class="hero-bg" src="homes.jpeg" alt="Neighborhood housing">
+    <div class="container hero-content">
+      <div class="kicker">Woman-Owned • Community-Focused • New Orleans</div>
+      <h1>Building Stability Through Housing</h1>
+      <p>
+        Dreux Property Solutions LLC is a woman-owned real estate business dedicated to improving
+        residential housing and supporting strong, stable communities through responsible property management.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-gold" href="services.html">Our Services</a>
+        <a class="btn btn-outline" href="contact.html">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER SECTION -->
+  <section class="section section-muted">
+    <div class="container">
+      <div class="cards" style="grid-template-columns: 1fr 1.2fr; align-items:center;">
+
+        <div class="card" style="padding:0; overflow:hidden;">
+          <img src="improvedheadshot.png" 
+               alt="Founder of Dreux Property Solutions" 
+               style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <div>
+          <h2 class="section-title">Founded With Purpose</h2>
+          <p class="lead">
+            Dreux Property Solutions was founded by a woman entrepreneur with a deep commitment
+            to stability, accountability, and long-term community impact.
+          </p>
+
+          <p>
+            Built from lived experience and a desire to create meaningful change, the company focuses on
+            restoring and maintaining homes that provide families with safe, dependable places to live.
+          </p>
+
+          <p>
+            This work is rooted in responsibility, consistency, and respect for the communities being served.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our Commitment</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Stability</h3>
+          <p>
+            We believe stable housing creates stronger families and healthier communities.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Responsibility</h3>
+          <p>
+            Every property is managed with care, transparency, and long-term accountability.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Community Impact</h3>
+          <p>
+            Our work is rooted in strengthening neighborhoods and supporting those who live there.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="small">&copy; <span id="year"></span> Dreux Property Solutions LLC. All rights reserved.</div>
+      <div class="small">Lakeisha Jenkins</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

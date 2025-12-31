@@ -1,0 +1,609 @@
+/* =========================
+   DREUX PROPERTY SOLUTIONS
+   Black / White / Gold Theme
+   Clean, professional layout
+   ========================= */
+
+:root{
+  --bg: #0b0b0d;
+  --bg2:#101014;
+  --panel: rgba(255,255,255,0.04);
+  --panel2: rgba(255,255,255,0.06);
+
+  --text: #f5f5f7;
+  --muted: rgba(245,245,247,0.76);
+
+  --gold: #d4af37;
+  --gold2:#b58b1a;
+
+  --border: rgba(212,175,55,0.25);
+  --border2: rgba(255,255,255,0.08);
+
+  --shadow: 0 18px 60px rgba(0,0,0,0.45);
+  --radius: 18px;
+}
+
+*{ box-sizing: border-box; margin:0; padding:0; }
+html{ scroll-behavior: smooth; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1000px 520px at 10% 10%, rgba(212,175,55,0.10), transparent 60%),
+    radial-gradient(900px 520px at 90% 15%, rgba(212,175,55,0.08), transparent 55%),
+    var(--bg);
+  line-height: 1.65;
+}
+
+a{ color: inherit; text-decoration: none; }
+img{ max-width: 100%; display:block; }
+
+.container{
+  width: 92%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER / NAV
+   ========================= */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11,11,13,0.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border2);
+}
+
+.nav-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 0.75rem;
+  min-width: 230px;
+}
+
+.brand img{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid rgba(212,175,55,0.22);
+  background: rgba(255,255,255,0.03);
+}
+
+.brand-name{
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  line-height: 1.15;
+}
+.brand-name span{
+  display:block;
+  margin-top: 0.15rem;
+  color: var(--gold);
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap: 0.95rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav a{
+  font-size: 0.93rem;
+  color: rgba(245,245,247,0.72);
+  padding: 0.25rem 0.15rem;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover{ color: var(--text); }
+.nav a.active{
+  color: var(--text);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* =========================
+   HERO (every page)
+   ========================= */
+.hero{
+  position: relative;
+  min-height: 46vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-bottom: 1px solid var(--border2);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(11,11,13,0.92), rgba(11,11,13,0.56) 55%, rgba(11,11,13,0.25)),
+    linear-gradient(180deg, rgba(11,11,13,0.20), rgba(11,11,13,0.92));
+  z-index: 1;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.05) saturate(1.03);
+  transform: scale(1.05);
+}
+
+.hero-content{
+  position: relative;
+  z-index: 2;
+  padding: 3.4rem 0;
+}
+
+.kicker{
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.84rem;
+  margin-bottom: 0.7rem;
+}
+
+.hero h1{
+  font-size: clamp(2.0rem, 4vw, 3.05rem);
+  line-height: 1.12;
+  margin-bottom: 0.85rem;
+}
+
+.hero p{
+  color: rgba(245,245,247,0.86);
+  max-width: 780px;
+  margin-bottom: 1.35rem;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.actions{ display:flex; flex-wrap:wrap; gap: 0.8rem; }
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 0.5rem;
+  padding: 0.78rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  cursor:pointer;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.btn:active{ transform: translateY(1px); }
+
+.btn-gold{
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: #111;
+  box-shadow: 0 10px 30px rgba(212,175,55,0.28);
+}
+.btn-gold:hover{ box-shadow: 0 12px 38px rgba(212,175,55,0.36); }
+
+.btn-outline{
+  background: transparent;
+  color: var(--text);
+  border-color: rgba(212,175,55,0.55);
+}
+.btn-outline:hover{
+  background: rgba(212,175,55,0.10);
+  border-color: rgba(212,175,55,0.85);
+}
+
+/* =========================
+   HOME: micro caption badge
+   ========================= */
+.micro-hero{
+  margin-top: 1.15rem;
+  display:flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.micro-badge{
+  border: 1px solid rgba(212,175,55,0.35);
+  background: rgba(255,255,255,0.03);
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  color: rgba(245,245,247,0.86);
+  font-size: 0.92rem;
+}
+.micro-badge span{
+  color: rgba(212,175,55,0.98);
+  font-weight: 850;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+.section{ padding: 3.2rem 0; }
+
+.section-muted{
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.00));
+  border-top: 1px solid var(--border2);
+  border-bottom: 1px solid var(--border2);
+}
+
+.section-title{
+  font-size: 1.85rem;
+  margin-bottom: 0.7rem;
+}
+
+.lead{
+  color: rgba(245,245,247,0.84);
+  max-width: 920px;
+}
+
+/* =========================
+   CARDS (general)
+   ========================= */
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.15rem;
+  margin-top: 1.6rem;
+}
+
+.card{
+  background: var(--panel);
+  border: 1px solid rgba(212,175,55,0.22);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3{ margin-bottom: 0.55rem; }
+.card p{ color: rgba(245,245,247,0.78); }
+
+/* =========================
+   LISTS
+   ========================= */
+.gold-list{
+  margin-top: 1.2rem;
+  display:grid;
+  gap: 0.65rem;
+}
+.gold-list li{
+  list-style: none;
+  padding-left: 0.9rem;
+  border-left: 3px solid rgba(212,175,55,0.7);
+  color: rgba(245,245,247,0.82);
+}
+
+/* =========================
+   STORY BLOCKS (image + caption)
+   **THIS is the section that fixes "pics too big"**
+   ========================= */
+.story-grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.1rem;
+  margin-top: 1.6rem;
+}
+
+.story{
+  grid-column: span 6;                 /* two per row on desktop */
+  background: var(--panel);
+  border: 1px solid rgba(212,175,55,0.22);
+  border-radius: var(--radius);
+  overflow:hidden;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+}
+
+/* Image sizing: controlled and consistent */
+.story img{
+  width: 100%;
+  height: clamp(160px, 22vw, 220px);   /* NEVER huge */
+  object-fit: cover;                   /* clean crop */
+  object-position: center;
+  display:block;
+}
+
+/* Optional: use this class on portrait photos to avoid awkward crops
+   Example in HTML: <img class="portrait" src="..." ...> */
+.story img.portrait{
+  object-position: center 20%;
+}
+
+/* Caption area */
+.caption-wrap{
+  padding: 1rem 1.1rem 1.1rem;
+}
+
+.caption-title{
+  color: rgba(212,175,55,0.95);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 0.35rem;
+}
+
+.story p{
+  color: rgba(245,245,247,0.82);
+  font-size: 0.98rem;
+}
+
+/* If you ever want smaller story images on About page only:
+   Add <body class="about-page"> in about.html */
+.about-page .story img{
+  height: clamp(150px, 18vw, 200px);
+}
+
+/* =========================
+   SLIDESHOW (if you use it)
+   ========================= */
+.slideshow{
+  margin-top: 1.2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(212,175,55,0.25);
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.03);
+}
+
+.slides{
+  position: relative;
+  height: min(52vh, 520px);
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition: opacity .55s ease;
+}
+.slide.active{ opacity:1; }
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position:center;
+}
+
+.slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(11,11,13,0.15), rgba(11,11,13,0.85));
+}
+
+.slide-caption{
+  position:absolute;
+  left: 1.15rem;
+  bottom: 1.05rem;
+  z-index:2;
+  max-width: 820px;
+}
+.slide-caption h3{ font-size: 1.25rem; margin-bottom: 0.25rem; }
+.slide-caption p{ color: rgba(245,245,247,0.82); font-size: 0.98rem; }
+
+.slide-controls{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(11,11,13,0.75);
+  border-top: 1px solid var(--border2);
+}
+
+.control-btn{
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(212,175,55,0.55);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.control-btn:hover{ background: rgba(212,175,55,0.10); }
+
+.dots{
+  display:flex;
+  gap: 0.45rem;
+  align-items:center;
+  justify-content:center;
+  flex:1;
+}
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(212,175,55,0.6);
+  background: transparent;
+  cursor:pointer;
+}
+.dot.active{ background: var(--gold); }
+
+/* =========================
+   CONTACT FORM
+   ========================= */
+.form{
+  max-width: 720px;
+  margin-top: 1.2rem;
+}
+
+.form-row{ margin-bottom: 1rem; }
+
+label{
+  display:block;
+  margin-bottom: 0.35rem;
+  color: rgba(245,245,247,0.84);
+  font-size: 0.95rem;
+}
+
+input, textarea{
+  width:100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+input:focus, textarea:focus{
+  outline:none;
+  border-color: rgba(212,175,55,0.8);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.18);
+}
+
+.note{
+  color: rgba(245,245,247,0.70);
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer{
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--border2);
+  color: rgba(245,245,247,0.70);
+  background: rgba(11,11,13,0.6);
+}
+
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.small{
+  font-size: 0.92rem;
+  color: rgba(245,245,247,0.72);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 980px){
+  .brand{ min-width: unset; }
+}
+
+@media (max-width: 900px){
+  .story{ grid-column: span 12; } /* one per row on mobile */
+  .slides{ height: 320px; }
+}
+
+@media (max-width: 520px){
+  .nav{ gap: 0.7rem; }
+  .hero-content{ padding: 3rem 0; }
+  .micro-badge{ font-size: 0.88rem; }
+}
+/* ===== ABOUT PAGE: make story images SMALL (thumbnail cards) ===== */
+.about-page .story{
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+/* Small thumbnail image */
+.about-page .story img{
+  width: 170px;           /* controls "how big" the photo is */
+  height: 130px;
+  flex: 0 0 170px;
+  object-fit: cover;
+  object-position: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Caption area */
+.about-page .caption-wrap{
+  padding: 0.95rem 1.1rem;
+}
+
+/* Keep the title + caption tight */
+.about-page .caption-title{
+  font-size: 0.74rem;
+}
+
+.about-page .story p{
+  font-size: 0.96rem;
+  margin-top: 0.15rem;
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 680px){
+  .about-page .story{
+    flex-direction: column;
+  }
+  .about-page .story img{
+    width: 100%;
+    height: 190px;
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+} 
+/* ===== MISSION PAGE: make story images SMALL (thumbnail cards) ===== */
+.mission-page .story{
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+/* small thumbnail image */
+.mission-page .story img{
+  width: 200px;  
+  height: 160px;
+  flex: 0 0 200px;
+  object-fit: cover;
+  object-position: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* tighten caption spacing */
+.mission-page .caption-wrap{
+  padding: 0.95rem 1.1rem;
+}
+
+.mission-page .caption-title{
+  font-size: 0.74rem;
+}
+
+.mission-page .story p{
+  font-size: 0.96rem;
+  margin-top: 0.15rem;
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 680px){
+  .mission-page .story{
+    flex-direction: column;
+  }
+  .mission-page .story img{
+    width: 200px;
+    height: 160px;
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+}

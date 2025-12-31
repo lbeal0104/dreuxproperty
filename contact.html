@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreux Property Solutions LLC | Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="brand">
+        <img src="logo (2).png" alt="Dreux Property Solutions LLC Logo" />
+        <div class="brand-name">
+          Dreux Property Solutions
+          <span>LLC</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mission.html">Mission</a>
+        <a href="services.html">Services</a>
+        <a href="community.html">Community Impact</a>
+        <a href="growth.html">Responsible Growth</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-bg" src="homes.jpeg" alt="Contact Dreux Property Solutions" />
+    <div class="container hero-content">
+      <div class="kicker">Contact</div>
+      <h1>Let’s Connect</h1>
+      <p>
+        Have a question or want to learn more about Dreux Property Solutions?
+        Send us a message and we’ll get back to you soon.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="section section-muted">
+    <div class="container">
+      <h2 class="section-title">Send a Message</h2>
+      <p class="lead">
+        We appreciate your interest. Please complete the form below and someone from our team will be in touch.
+      </p>
+
+      <form
+        class="form"
+        action="https://formspree.io/f/xqekrgbr"
+        method="POST"
+      >
+
+        <!-- Redirect after submit -->
+        <input type="hidden" name="_next" value="thankyou.html">
+
+        <!-- Email subject -->
+        <input type="hidden" name="_subject" value="New Contact Form Submission - Dreux Property Solutions">
+
+        <!-- Anti-spam honeypot -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="info@dreuxpropertysolutionsllc.com" required />
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="How can we help?" required />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Type your message here..."
+            required
+          ></textarea>
+        </div>
+
+        <button class="btn btn-gold" type="submit">
+          Send Message
+        </button>
+
+        <p class="note">
+          We typically respond within 1-2 business days.
+          Based in New Orleans,Louisiana, Dreux Property Solutions LLC serves local communities with integrity and purpose.
+        </p>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="small">
+        &copy; <span id="year"></span> Dreux Property Solutions LLC. All rights reserved.
+      </div>
+      <div class="small">Contact</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
+
